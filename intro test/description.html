@@ -1,0 +1,223 @@
+<!DOCTYPE doctype PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Java API</title>
+  </head>
+  <body>
+    <h2 style="margin-left: 40px;">Java API<br>
+    </h2>
+    <div style="margin-left: 40px;">This lab is for practicing Java -
+      you have to find descriptions of the following classes and solve a
+      set of small problems.<br>
+    </div>
+    <p style="margin-left: 40px;"><tt>java.lang.String</tt> <br>
+      <tt>java.lang.StringBuffer/StringBuilder<br>
+        java.lang.Character</tt> <br>
+      <tt>java.lang.Integer (-&gt; Double, ...)</tt> <br>
+      <tt>java.lang.Math</tt> <br>
+      <tt>java.lang.Comparable</tt> </p>
+    <p style="margin-left: 40px;"><tt>java.util.StringTokenizer</tt> <tt><br>
+        java.util.Calendar</tt><br>
+      <tt>java.util.Random</tt> <tt><br>
+        java.util.ArrayList</tt> <tt><br>
+        java.util.HashMap</tt><br>
+      <span style="font-family: monospace;">java.util.Set</span><br>
+      <tt>java.util.List<br>
+        java.util.Collection<br>
+        java.util.TreeSet<br>
+      </tt><tt>java.util.Arrays<br>
+        java.util.Iterator<br>
+      </tt></p>
+    <p style="margin-left: 40px;">...<br>
+      &nbsp; </p>
+    <h3 style="margin-left: 40px;">Problems</h3>
+    <div style="margin-left: 40px;">
+      <ul>
+        <li>Convert a given double number (<span style="font-family:
+            monospace;">double</span>) into String (<span
+            style="font-family: monospace;">String</span>).</li>
+        <li>Convert a string (<span style="font-family: monospace;">String</span>)
+          into an integer number (<span style="font-family: monospace;">int</span>).
+
+          Assume that the string actually represents an integer
+          (Discover what happens, if the string is illegal?).</li>
+        <li>Take the current moment of time from the computers inner
+          clock and form a string "hours:minutes:seconds" (use 24h
+          notation, e.g. "13:25:10").</li>
+        <li>Find a cosine of a given angle that is expressed in degrees.</li>
+        <li>Print a table of square roots for numbers from 0 up to 100
+          using step 5 (print two numbers per line: argument and its
+          square root).</li>
+        <li>Given a string replace in it all uppercase letters with
+          corresponding lowercase letters and all lowercase letters with
+          corresponding uppercase letters. Do not change other symbols (<span
+            style="font-family: monospace;">"ABcd12"</span> -&gt; <span
+            style="font-family: monospace;">"abCD12"</span>). Use <span
+            style="font-family: monospace;">StringBuffer</span> or <span
+            style="font-family: monospace;">StringBuilder</span> class
+          for intermediate result. Create an independent method <code
+            id="yui_3_2_0_1_1314010804247640">String reverseCase (String
+            s) </code>for this task.</li>
+        <li>Given a string find its reverse (<span style="font-family:
+            monospace;">"1234ab"</span> -&gt; <span style="font-family:
+            monospace;">"ba4321"</span>).</li>
+        <li>Given a text (<span style="font-family: monospace;">String</span>)
+          find the number of words in it. Words are separated by any
+          positive number of any kind of whitespaces (like space, tab,
+          ...). Create an independent method <code>int countWords
+            (String t) </code>for this task.</li>
+        <li>Register the current time, pause the program for 3 seconds,
+          register the current time again and print the difference
+          between these two moments of time in milliseconds.</li>
+        <li>Create a list (<span style="font-family: monospace;">ArrayList</span>)
+          of 100 random integers (<span style="font-family: monospace;">Integer</span>)
+          in between 0 and 999. Print the result. What is the difference
+          between<span style="font-family: monospace;"> int </span>and
+          <span style="font-family: monospace;">Integer</span>?</li>
+        <li>Find the minimal element of this list. How to find the
+          minimal element of any <span style="font-family: monospace;">List</span>
+          of <span style="font-family: monospace;">Comparable</span>
+          elements (read about interfaces, also consider that <span
+            style="font-family: monospace;">ArrayList implements List </span>and
+
+          <span style="font-family: monospace;">Integer implements
+            Comparable</span>)?</li>
+        <li>Create a hashtable (<span style="font-family: monospace;">HashMap</span>)
+          containing 5 pairs of strings, where "subject code" serves as
+          a key and "subject name" serves as a value (e.g. <span
+            style="font-style: italic;">("I231", "Algorithms and Data
+            Structures")</span> , just choose any subjects you like).</li>
+        <li>Print all the keys of this hashtable (one key per line).</li>
+        <li>Remove one of the subjects from the hashtable.</li>
+        <li>Print all pairs from this hashtable (each pair on separate
+          line).</li>
+        <li>Reverse the order of elements of the list you have created
+          before. Write an independent method<code> </code>to reverse
+          any list. The method signature is</li>
+      </ul>
+      <div style="margin-left: 80px;"><span style="font-family:
+          monospace;">public static &lt;T extends Object&gt; void
+          reverseList (List&lt;T&gt; list)</span><br style="font-family:
+          monospace;">
+        <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+          throws UnsupportedOperationException </span><br>
+      </div>
+    </div>
+    <div style="margin-left: 40px;"><br>
+      <div style="margin-left: 40px;">Output the result and check that
+        it is correct.<br>
+      </div>
+    </div>
+    <div style="margin-left: 40px;">
+      <ul>
+        <li>Write an independent method to find the maximal element of
+          any Java collection (you can use your list for testing). The
+          method signature is</li>
+      </ul>
+      <div style="margin-left: 40px;">
+        <div style="margin-left: 40px;"><span style="font-family:
+            monospace;">static public &lt;T extends Object &amp;
+            Comparable&lt;? super T&gt;&gt; T</span> <span
+            style="font-family: monospace;">maximum (Collection&lt;?
+            extends T&gt; a) </span><br>
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            throws NoSuchElementException</span><br>
+        </div>
+      </div>
+      <br>
+      You have to upload your full solution to <a
+        href="https://moodle.hitsa.ee/">Moodle</a> !<br>
+    </div>
+    <div style="margin-left: 40px;"> <br>
+      <hr style="width: 100%; height: 2px;"></div>
+    <h3 style="margin-left: 40px;">Oskused, mis tuleks praktikumide
+      k&auml;igus omandada:</h3>
+    <ul style="margin-left: 40px;">
+      <li>informatsiooni kiire leidmine API kirjeldusest&nbsp;</li>
+      <li>teisendused &uuml;hest t&uuml;&uuml;bist teise, m&auml;hisklasside kasutamine</li>
+      <li> &nbsp;lihtsate arvutuste tegemine</li>
+      <li> &nbsp;s&otilde;net&ouml;&ouml;tlus, s&otilde;nepuhvri kasutamine</li>
+      <li> &nbsp;aega v&auml;ljendavate andmetega manipuleerimine</li>
+      <li> &nbsp;juhuslike andmete genereerimine</li>
+      <li>&nbsp;listi ja paisktabeli kasutamine, iteraatorid</li>
+    </ul>
+    <h3 style="margin-left: 40px;"> &Uuml;lesanded:</h3>
+    <div style="margin-left: 40px;">Koostage peameetod (<tt>main</tt>),
+      mis sisaldaks lahendust j&auml;rgmistele probleemidele: </div>
+    <ul style="margin-left: 40px;">
+      <li>&nbsp; Teisendada etteantud reaalarv (<span
+          style="font-family: monospace;">double</span>) s&otilde;neks (<tt>String</tt>).</li>
+      <li>&nbsp; Teisendada etteantud s&otilde;ne t&auml;isarvuks (eeldusel, et see
+        s&otilde;ne v&auml;ljendab t&auml;isarvu).</li>
+      <li>&nbsp; V&otilde;tta arvuti kellalt jooksev n&auml;it ning moodustada s&otilde;ne
+        kujul: <i>tunnid:minutid:sekundid </i>(tunnid 24h skaalal).</li>
+      <li>&nbsp; Leida kraadides etteantud nurga koosinus.</li>
+      <li> &nbsp;V&auml;ljastada ruutjuurte tabel arvude 0 kuni 100 jaoks
+        sammuga 5.</li>
+      <li> &nbsp;Vahetada etteantud s&otilde;nes suurt&auml;hed v&auml;iket&auml;htedega ja
+        vastupidi j&auml;ttes muud s&uuml;mbolid muutmata (<span
+          style="font-family: monospace;">"ABcd12"</span> -&gt; <span
+          style="font-family: monospace;">"abCD12"</span>). Kasutage
+        vahetulemuste salvestamiseks s&otilde;nepuhvrit (<tt>StringBuffer</tt>).</li>
+      <li> &nbsp;Muuta etteantud s&otilde;ne s&uuml;mbolite j&auml;rjekord vastupidiseks
+        (<span style="font-family: monospace;">"1234ab"</span> -&gt; <span
+          style="font-family: monospace;">"ba4321"</span>).</li>
+      <li> &nbsp;Leida s&otilde;nade arv etteantud s&otilde;nes (s&otilde;nade eraldajaks
+        olgu v&auml;hemalt &uuml;ks t&uuml;hik, tabulatsioonim&auml;rk vms).</li>
+      <li>&nbsp; V&otilde;tta arvuti kellalt jooksev aeg, teha etteantud
+        pikkusega paus (n&auml;iteks 3 sek.), v&otilde;tta uuesti jooksev aeg ning
+        arvutada nende kahe ajahetke tegelik vahe millisekundites.<br>
+      </li>
+    </ul>
+    <ul style="margin-left: 40px;">
+      <li> Genereerida juhuarvudest vahemikus 0 kuni 999 (<tt>Integer</tt>)
+        koosnev 100-elemendiline list (<tt>ArrayList</tt>) ning
+        v&auml;ljastada see.</li>
+      <li>&nbsp;Leida selle listi v&auml;him element. Proovige kirjutada
+        eraldi meetod, mis leiaks etteantud <tt>List</tt>-liidest
+        rahuldava objekti v&auml;hima elemendi eeldusel, et elemendid on
+        v&otilde;rreldavad liidese <tt>Comparable</tt> m&otilde;ttes (mida <tt>Integer</tt>
+        isendid ka on).</li>
+      <li> &nbsp;Moodustada paisktabel (<tt>HashMap</tt>) umbes 5
+        elemendiga, milles v&otilde;tmeks on &otilde;ppeaine kood (<tt>String</tt>) ja
+        elemendiks &otilde;ppeaine nimetus (<tt>String</tt>). Andmed m&otilde;elge ise
+        v&auml;lja.<br>
+      </li>
+      <li> V&auml;ljastada selle paisktabeli k&otilde;ik v&otilde;tmed.</li>
+      <li> Eemaldada &uuml;ks ainetest sellest tabelist.</li>
+      <li> V&auml;ljastada k&otilde;ik paarid "v&otilde;ti - v&auml;&auml;rtus" sellest tabelist.</li>
+      <li> Muuta esimeses &uuml;lesandes genereeritud listi (<span
+          style="font-family: monospace;">ArrayList</span>) elementide
+        j&auml;rjekord vastupidiseks. V&auml;ljastada tulemus ja kontrollida selle
+        &otilde;igsust.</li>
+      <li> Koostada maksimumi leidmise meetod (eraldi meetodina), mis
+        kasutaks liideseid <tt>Collection</tt> ja <tt>Comparable</tt>
+        (s.t. meetodi parameetriks on <span style="font-family:
+          monospace;">Collection</span>-objekt, mis sisaldab <span
+          style="font-family: monospace;">Comparable</span>-liidest
+        rahuldavaid elemente, meetodi tagastusv&auml;&auml;rtuseks on maksimaalne
+        element <span style="font-family: monospace;">Comparable</span>-t&uuml;&uuml;pi
+
+        objektina). Selle meetodi poole p&ouml;&ouml;rdumisel v&otilde;ite kasutada
+        esimeses &uuml;lesandes loodud listi.<br>
+      </li>
+    </ul>
+    <ul style="margin-left: 40px;">
+    </ul>
+    <div style="margin-left: 40px;">
+      <div style="margin-left: 40px;"><span style="font-weight: bold;"></span>Programm testida ja
+
+        esitada Moodle kaudu.<br>
+      </div>
+      <br>
+      <hr style="width: 100%; height: 2px;">Jaanus P&ouml;ial<br>
+      <br>
+      <br>
+      <br>
+      <br>
+    </div>
+  </body>
+</html>
